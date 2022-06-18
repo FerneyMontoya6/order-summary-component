@@ -1,0 +1,184 @@
+:root {
+  /* COLORS */
+  /* ------------------------- Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* ------------------------- Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* ------------------------- Hover */
+  --purple: #1b00fe8c;
+
+  /* BOX-MODEL */
+  /* ------------------------- paddings */
+  --width-card-items: 85%;
+
+}
+
+/* ------------------------------------------------------- Prework */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  background: url(./order-summary-component-main/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+}
+
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+}
+
+/* ------------------------------------------------------- Sumary card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  background-color: white;
+}
+
+.card__hero {
+  width: 100%;
+}
+
+.card__hero img {
+  width: 100%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.card__description {
+  width: var(--width-card-items);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.card__description--title {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.card__description--paragraph {
+  margin: 1.5rem 0;
+  color: var(--desaturated-blue);
+}
+
+.card__panel {
+  display: flex;
+  justify-content: space-between;
+  width: var(--width-card-items);
+  padding: 5%;
+  margin: 0.5rem 0;
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+}
+
+.card__panel--left {
+  display: flex;
+}
+
+.card__panel--left img {
+  margin-right: 1.5rem;
+}
+
+.card__panel--left div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__panel--left h4 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.card__panel--left p {
+  color: var(--desaturated-blue);
+}
+
+.card__panel--right {
+  display: flex;
+  align-items: center;
+}
+
+.card__panel--right small {
+  font-weight: 700;
+}
+
+.card__panel--right small:hover {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.card__buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  width: var(--width-card-items);
+}
+
+.card__buttons a {
+  text-decoration: none;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--bright-blue);
+  border-radius: 1.3rem;
+}
+
+.card__buttons span {
+  text-align: center;
+}
+
+.card__buttons--pay {
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 1px 6px 18px -13px rgba(56, 41, 224, 1);
+  -moz-box-shadow: 1px 6px 18px -13px rgba(56, 41, 224, 1);
+  box-shadow: 1px 6px 18px -13px rgba(56, 41, 224, 1);
+}
+
+.card__buttons--pay:hover {
+  background-color: var(--purple);
+}
+
+.card__buttons--cancel {
+  display: inline-block;
+  text-align: center;
+  margin: 1.5rem;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  background-color: white;
+}
+
+.card__buttons--cancel:hover {
+  color: var(--dark-blue);
+}
